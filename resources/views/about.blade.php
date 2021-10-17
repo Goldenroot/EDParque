@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        EDParque
+        EDParque - Sobre
     </title>
 
     <!-- Font Awesome Icons -->
@@ -155,13 +155,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav main-menu ml-auto">
                             <li class="">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="menu_has_children">
-                                <a href="#">Sobre</a>
-                            </li>
-                            <li>
-                                <a href="#">Contacta-nos</a>
+                                <a href="{{url('/')}}">Home</a>
                             </li>
                         </ul>
                         <div class="nav-right">
@@ -177,97 +171,75 @@
         </div>
     </header>
 
-    <section class="hero bg_img" style="background-image: url('/images/hero.jpg')">
-        <div class="hero__shape">
-            <img src='images/shape.png' alt="image">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="hero__content">
-                        <span class="hero__sub-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInUp;">EDParque</span>
-                        <h2 class="hero__title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: fadeInUp;">Bem Vindo Ao EDParque</h2>
-                        <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.7s; animation-name: fadeInUp;">Texto sobre as notas</p>
-                        @if(Auth::User())
-                            <a href="{{url('home')}}" class="cmn-btn wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.9s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.9s; animation-name: fadeInUp;">Entra!</a>
-                        @else
-                            <a href="#" class="cmn-btn wow fadeInUp" data-dismiss="modal" data-toggle="modal" data-target="#signupModal" data-wow-duration="0.5s" data-wow-delay="0.9s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.9s; animation-name: fadeInUp;">Regista-te!</a>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="inner-hero bg_img" data-background="images/inner-hero.jpg" style="background-image: url('images/inner-hero.jpg')">
+        <div class="shape position-absolute"><img src="images/shape.png" alt="image"></div>
 
-    <section class=" pt-120 pb-120 position-relative overflow-hidden">
-        <div class="about-obj-1" data-paroller-factor="-0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" style="transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="images/about-obj-1.png" alt="image"></div>
-        <div class="about-obj-2" data-paroller-factor="0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" style="transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="images/about-obj-2.png" alt="image"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="about-content">
-                        <div class="section-header has--bg">
-                            <div class="header-image style--two"></div>
-                            <h2 class="section-title">Texto explicativo</h2>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum dictum quam, commodo egestas sapien ullamcorper in. Sed suscipit, ipsum id blandit laoreet, nulla elit congue mauris, at interdum arcu magna pellentesque justo. Quisque non nunc rhoncus nunc maximus vehicula sit amet nec est. Suspendisse potenti. Vivamus rutrum erat vel dui tristique, sed rhoncus eros varius. Phasellus sagittis augue lacinia turpis placerat, vitae eleifend ipsum mattis. Vivamus finibus accumsan ultrices. Cras in accumsan arcu.
-                        </p>
-                        <a href="{{url('/about')}}" class="cmn-btn mt-5">Descobre Mais!</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-lg-0 mt-4">
-                    <div class="about-thumb">
-                        <img src="images/about-books.png" alt="image" class="image-1">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-section bg_img" style="background-image: url('images/footer.png')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="subscribe-area" id="subscribe-box">
-                        <div class="obj"><img src="assets/images/elements/subscribe.png" alt="image"></div>
-                        <div class="subscribe-content">
-                            <h2 class="title">Tens alguma dúvida?</h2>
-                            <p>Envia-nos um Email!</p>
-                            <p></p>
-                            <form class="subscribe-form">
-                                <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Insere o teu endereço de Email">
-                                <button type="submit">Enviar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row footer-top mb-none-50">
-
-            </div>
-            <div class="row footer-bottom align-items-center">
-                <div class="col-lg-7 col-md-6 text-md-left text-center">
-
-                </div>
-                <div class="col-lg-5 col-md-6 mt-md-0 mt-3">
-                    <ul class="social-links justify-content-md-end justify-content-center">
-                        <li><a href="#0"><i class="lab la-facebook-f"></i></a></li>
-                        <li><a href="#0"><i class="lab la-twitter"></i></a></li>
-                        <li><a href="#0"><i class="lab la-pinterest-p"></i></a></li>
-                        <li><a href="#0"><i class="lab la-google-plus"></i></a></li>
-                        <li><a href="#0"><i class="lab la-instagram"></i></a></li>
+                    <h2 class="page-title">Sobre Nós</h2>
+                    <ul class="page-list">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-header text-center has--bg">
+                        <div class="header-image"><img src="images/header-el.png" alt="image"></div>
+                        <h2 class="section-title">Estatísticas</h2>
+                        <p>Texto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-minus-80">
+                <div class="container">
+                    <div class="row mb-none-30 justify-content-center">
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="overview-card style--two">
+                                <div class="overview-card__icon">
+                                    <img src="assets/icon/1.png" alt="image">
+                                </div>
+                                <div class="overview-card__content">
+                                    <h4 class="overview-card__number">Escolas</h4>
+                                    <p>Escolas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="overview-card style--two">
+                                <div class="overview-card__icon">
+                                    <img src="/images/2.png" alt="image">
+                                </div>
+                                <div class="overview-card__content">
+                                    <h4 class="overview-card__number">+{{count(\App\Models\User::all())}}</h4>
+                                    <p>Estudantes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="overview-card style--two">
+                                <div class="overview-card__icon">
+                                    <img src="images/school_icon.png" alt="image">
+                                </div>
+                                <div class="overview-card__content">
+                                    <h4 class="overview-card__number">+103</h4>
+                                    <p>Notas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 </body>
-
-<script defer>
-
-
-</script>
-
 </html>

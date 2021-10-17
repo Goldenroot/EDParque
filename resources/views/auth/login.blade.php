@@ -34,9 +34,6 @@
 
     <!-- CSS Files -->
     <link href="{{ URL::asset('css/app.css') }} " rel="stylesheet" />
-    <link href="{{ URL::asset('css/nucleo-icons.css') }} " rel="stylesheet" />
-    <link href="{{ URL::asset('css/nucleo-svg.css') }} " rel="stylesheet" />
-    <link href="{{ URL::asset('css/soft-ui-dashboard.css') }} " rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
