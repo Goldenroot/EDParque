@@ -211,7 +211,7 @@
                             <h2 class="section-title">Texto explicativo</h2>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum dictum quam, commodo egestas sapien ullamcorper in. Sed suscipit, ipsum id blandit laoreet, nulla elit congue mauris, at interdum arcu magna pellentesque justo. Quisque non nunc rhoncus nunc maximus vehicula sit amet nec est. Suspendisse potenti. Vivamus rutrum erat vel dui tristique, sed rhoncus eros varius. Phasellus sagittis augue lacinia turpis placerat, vitae eleifend ipsum mattis. Vivamus finibus accumsan ultrices. Cras in accumsan arcu.
+Texto sobre o website
                         </p>
                         <a href="{{url('/about')}}" class="cmn-btn mt-5">Descobre Mais!</a>
                     </div>

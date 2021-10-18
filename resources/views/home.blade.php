@@ -44,7 +44,8 @@
                     <i class="fa fa-bell"></i>
                 </a>
                 <a href="#" class="avatar">
-                    <img src="https://uifaces.co/our-content/donated/gPZwCbdS.jpg" alt="" />
+                    <img src="{{Auth::User()->avatar}}" alt="avatar" />
+
                 </a>
             </div>
         </div>
