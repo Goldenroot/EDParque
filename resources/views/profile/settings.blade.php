@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        EDParque - Home
+        EDParque - Definições
     </title>
 
     <!-- Font Awesome Icons -->
@@ -26,9 +26,9 @@
         <div class="header-logo">
             <a href="#">
                 <div>
-                    <img src="" />
+                    <img src=""/>
                 </div>
-                <img src="" />
+                <img src=""/>
             </a>
         </div>
         <div class="header-navigation">
@@ -59,8 +59,62 @@
 </header>
 <main class="main">
     <div class="responsive-wrapper">
-
         <div class="main-header">
+            <h1>Definições</h1>
+            <div class="search">
+                <input type="text" placeholder="Procurar" />
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="horizontal-tabs">
+            <a href="#" class="active">Os Meus Detalhes</a>
+            <a href="#">Perfil</a>
+            <a href="#">Notificações</a>
+            <a href="#">Widgets</a>
+            <a href="#">Segurança e Início de Sessão</a>
+        </div>
+        <div class="content-header">
+            <div class="content-header-intro">
+                <h2>Os Meus Detalhes</h2>
+                <p>Edita os detalhes da tua conta.</p>
+            </div>
+            <div class="content-header-actions">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-panel">
+                <div class="vertical-tabs">
+                    <a href="#" class="active">Ver todos</a>
+                    <a href="#">Geral</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-header" style="align-items: center !important;">
+                            <div>
+                                <span><img src="{{ URL::asset('images/weather_icon.png') }}"/></span>
+                                <h3>Weather</h3>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="card-body">
+                            <p>Consulta a temperatura da tua região.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#">Ver Informações</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
         </div>
     </div>
 </main>

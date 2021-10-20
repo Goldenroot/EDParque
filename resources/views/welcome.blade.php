@@ -155,13 +155,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav main-menu ml-auto">
                             <li class="">
-                                <a href="#">Home</a>
+                                <a href="">Home</a>
                             </li>
                             <li class="menu_has_children">
-                                <a href="#">Sobre</a>
+                                <a href="" id="sobre_btn" >Sobre</a>
                             </li>
                             <li>
-                                <a href="#">Contacta-nos</a>
+                                <a href="">Contacta-nos</a>
                             </li>
                         </ul>
                         <div class="nav-right">
@@ -199,7 +199,7 @@
         </div>
     </section>
 
-    <section class=" pt-120 pb-120 position-relative overflow-hidden">
+    <section class=" pt-120 pb-120 position-relative overflow-hidden" id="section_sobre">
         <div class="about-obj-1" data-paroller-factor="-0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" style="transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="images/about-obj-1.png" alt="image"></div>
         <div class="about-obj-2" data-paroller-factor="0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" style="transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="images/about-obj-2.png" alt="image"></div>
         <div class="container">
