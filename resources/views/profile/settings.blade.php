@@ -109,7 +109,45 @@
                             <p>Consulta a temperatura da tua região.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#">Ver Informações</a>
+                            <a href="#" id="weather_info">Ver Informações</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-header" style="align-items: center !important;">
+                            <div>
+                                <span><img src="{{ URL::asset('images/clock_icon.png') }}"/></span>
+                                <h3>Relógio</h3>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="card-body">
+                            <p>Consulta as horas da tua região.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" id="clock_info">Ver Informações</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-header" style="align-items: center !important;">
+                            <div>
+                                <span><img src="{{ URL::asset('images/.png') }}"/></span>
+                                <h3>ApI 3 </h3>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="card-body">
+                            <p>Consulta a </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" id="clock_info">Ver Informações</a>
                         </div>
                     </article>
 
