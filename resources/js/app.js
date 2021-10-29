@@ -20,6 +20,12 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('settings-options', require('./components/SettingsMenu/Settings_Options.vue').default);
+Vue.component('settings-detalhes', require('./components/SettingsMenu/Settings_Detalhes.vue').default);
+Vue.component('settings-perfil', require('./components/SettingsMenu/Settings_Perfil.vue').default);
+Vue.component('settings-notificacoes', require('./components/SettingsMenu/Settings_Notificacoes.vue').default);
+Vue.component('settings-widgets', require('./components/SettingsMenu/Settings_Widgets.vue').default);
+Vue.component('settings-seguranca', require('./components/SettingsMenu/Settings_Dispositivos.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
