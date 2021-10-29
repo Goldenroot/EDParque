@@ -458,3 +458,550 @@ html::-webkit-scrollbar-thumb {
     border: 4px solid var(--c-background-primary);
     border-radius: 99em;
 }
+
+/*--------------------------
+    1. PROFILE HEADER
+--------------------------*/
+.profile-header {
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+}
+
+.profile-header.v2 .profile-header-info {
+    height: 112px;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description {
+    min-height: 164px;
+    padding: 84px 0 0 164px;
+    position: absolute;
+    left: 32px;
+    bottom: 0;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-avatar {
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-avatar.user-short-description-avatar-mobile {
+    top: -54px;
+    margin-left: -60px;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-title,
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-text {
+    text-align: left;
+}
+
+.profile-header.v2 .profile-header-info .user-stats {
+    left: auto;
+    top: 38px;
+    right: 164px;
+}
+
+.profile-header.v2 .profile-header-info .tag-sticker {
+    position: absolute;
+    top: -12px;
+    right: 28px;
+    display: none;
+}
+
+.profile-header.v2 .profile-header-info .profile-header-info-actions {
+    top: 32px;
+}
+
+.profile-header.v2 .profile-header-info .profile-header-info-actions .profile-header-info-action.button {
+    width: 58px;
+}
+
+.profile-header .profile-header-cover {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 300px;
+}
+
+.profile-header .profile-header-info {
+    height: 126px;
+    position: relative;
+}
+
+.profile-header .profile-header-info .user-short-description .user-short-description-avatar-mobile {
+    display: none;
+    top: -54px;
+    margin-left: -60px;
+}
+
+.profile-header .profile-header-info .profile-header-social-links-wrap {
+    width: 352px;
+    height: 44px;
+    margin: 0 auto;
+    position: absolute;
+    top: 54px;
+    right: 32px;
+}
+
+.profile-header .profile-header-info .profile-header-social-links-wrap .profile-header-social-links {
+    padding-top: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-header .profile-header-info .profile-header-social-links-wrap .slider-controls {
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    z-index: 1;
+}
+
+.profile-header .profile-header-info .user-stats {
+    position: absolute;
+    top: 54px;
+    left: 40px;
+}
+
+.profile-header .profile-header-info .profile-header-info-actions {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    right: 32px;
+}
+
+.profile-header .profile-header-info .profile-header-info-actions .profile-header-info-action {
+    margin-right: 16px;
+}
+
+.profile-header .profile-header-info .profile-header-info-actions .profile-header-info-action.button {
+    width: 180px;
+}
+
+.profile-header .profile-header-info .profile-header-info-actions .profile-header-info-action:last-child {
+    margin-right: 0;
+}
+
+/*--------------------
+    MEDIA QUERIES
+--------------------*/
+@media screen and (max-width: 1365px) {
+    .profile-header .profile-header-cover {
+        height: 200px;
+    }
+    .profile-header.v2 .profile-header-info {
+        height: auto;
+    }
+    .profile-header.v2 .profile-header-info .user-short-description {
+        min-height: auto;
+        padding: 52px 0 0;
+        position: static;
+    }
+    .profile-header.v2 .profile-header-info .user-short-description .user-short-description-avatar {
+        top: -116px;
+        left: 50%;
+        margin-left: -74px;
+    }
+    .profile-header.v2 .profile-header-info .user-short-description .user-short-description-title,
+    .profile-header.v2 .profile-header-info .user-short-description .user-short-description-text {
+        text-align: center;
+    }
+    .profile-header .profile-header-info {
+        height: auto;
+        padding-bottom: 32px;
+    }
+    .profile-header .profile-header-info .profile-header-social-links-wrap,
+    .profile-header .profile-header-info .user-stats,
+    .profile-header .profile-header-info .profile-header-info-actions {
+        position: static;
+    }
+    .profile-header .profile-header-info .profile-header-social-links-wrap {
+        margin-top: 32px;
+    }
+    .profile-header .profile-header-info .user-stats,
+    .profile-header .profile-header-info .profile-header-info-actions {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-header .profile-header-cover {
+        height: 76px;
+    }
+    .profile-header.v2 .profile-header-info .user-short-description {
+        padding-top: 84px;
+    }
+    .profile-header.v2 .profile-header-info .user-stats .user-stat:first-child {
+        display: none;
+    }
+    .profile-header.v2 .profile-header-info .user-stats .user-stat:nth-last-child(2)::after {
+        display: block;
+    }
+    .profile-header.v2 .profile-header-info .user-stats .user-stat:last-child {
+        display: block;
+    }
+    .profile-header.v2 .profile-header-info .tag-sticker {
+        display: flex;
+    }
+    .profile-header .profile-header-info .user-short-description {
+        padding-top: 84px;
+    }
+    .profile-header .profile-header-info .user-short-description .user-short-description-avatar {
+        display: none;
+    }
+    .profile-header .profile-header-info .user-short-description .user-short-description-avatar-mobile {
+        display: block;
+    }
+    .profile-header .profile-header-info .user-short-description .user-short-description-title {
+        font-size: 1.125rem;
+    }
+    .profile-header .profile-header-info .user-short-description .user-short-description-text {
+        font-size: 0.6875rem;
+    }
+    .profile-header .profile-header-info .profile-header-social-links-wrap {
+        width: 160px;
+        height: 36px;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+    .profile-header .profile-header-info .profile-header-social-links-wrap .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    .profile-header .profile-header-info .user-stats .user-stat:nth-last-child(2)::after {
+        display: none;
+    }
+    .profile-header .profile-header-info .user-stats .user-stat:last-child {
+        display: none;
+    }
+    .profile-header .profile-header-info .user-stats .user-stat .user-stat-title {
+        font-size: 0.875rem;
+    }
+    .profile-header .profile-header-info .user-stats .user-stat .user-stat-text {
+        font-size: 0.6875rem;
+    }
+    .profile-header .profile-header-info .profile-header-info-actions .profile-header-info-action.button {
+        width: 114px;
+    }
+}
+
+/*--------------------------------
+    18. USER SHORT DESCRIPTION
+--------------------------------*/
+.user-short-description {
+    padding-top: 84px;
+    position: relative;
+}
+
+.user-short-description.big {
+    padding-top: 52px;
+}
+
+.user-short-description.big .user-short-description-avatar {
+    top: -116px;
+    margin-left: -74px;
+}
+
+.user-short-description.big .user-short-description-title {
+    font-size: 1.5rem;
+}
+
+.user-short-description.big .user-short-description-text {
+    font-size: 0.75rem;
+}
+
+.user-short-description.small {
+    padding-top: 62px;
+}
+
+.user-short-description.small .user-short-description-avatar {
+    margin-left: -50px;
+}
+
+.user-short-description.landscape {
+    padding: 0 0 0 32px;
+}
+
+.user-short-description.landscape .user-short-description-avatar {
+    top: 0;
+    margin-left: 0;
+}
+
+.user-short-description.landscape .user-short-description-title,
+.user-short-description.landscape .user-short-description-text {
+    text-align: left;
+}
+
+.user-short-description.landscape.tiny {
+    height: 56px;
+    padding-top: 12px;
+}
+
+.user-short-description.landscape.tiny .user-short-description-avatar {
+    left: -25px;
+}
+
+.user-short-description .user-short-description-avatar {
+    position: absolute;
+    top: -54px;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.user-short-description .user-short-description-title,
+.user-short-description .user-short-description-text {
+    font-weight: 700;
+    text-align: center;
+}
+
+.user-short-description .user-short-description-title {
+    font-size: 1.125rem;
+}
+
+.user-short-description .user-short-description-title a {
+    color: #3e3f5e;
+    font-weight: 700;
+}
+
+.user-short-description .user-short-description-title.small {
+    font-size: 0.875rem;
+}
+
+.user-short-description .user-short-description-text {
+    margin-top: 10px;
+    color: #adafca;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.user-short-description .user-short-description-text a {
+    color: #adafca;
+    font-weight: 700;
+}
+
+.user-short-description .user-short-description-text a:hover {
+    color: #00c7d9;
+}
+
+.user-short-description .user-short-description-text.regular {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: none;
+}
+
+/*-----------------------------
+    19. SLIDER CONTROL
+-----------------------------*/
+.slider-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.slider-control.negative .slider-control-icon {
+    fill: #fff;
+}
+
+.slider-control.negative.disabled, .slider-control.negative[aria-disabled=true] {
+    opacity: .4;
+}
+
+.slider-control.negative.disabled:hover .slider-control-icon, .slider-control.negative[aria-disabled=true]:hover .slider-control-icon {
+    fill: #fff;
+    opacity: .4;
+}
+
+.slider-control.negative:hover .slider-control-icon {
+    fill: #fff;
+    opacity: 1;
+}
+
+.slider-control.disabled, .slider-control[aria-disabled=true] {
+    opacity: .5;
+}
+
+.slider-control.disabled:hover .slider-control-icon, .slider-control[aria-disabled=true]:hover .slider-control-icon {
+    fill: #adafca;
+    opacity: .5;
+}
+
+.slider-control .slider-control-icon {
+    fill: #adafca;
+    pointer-events: none;
+    opacity: .6;
+    transition: fill .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+.slider-control.left .slider-control-icon {
+    transform: rotate(180deg);
+}
+
+.slider-control:hover .slider-control-icon {
+    fill: #3e3f5e;
+    opacity: 1;
+}
+
+/*-----------------------------
+    11. USER STATS
+-----------------------------*/
+.user-stats {
+    display: flex;
+    justify-content: center;
+}
+
+.user-stats .user-stat {
+    position: relative;
+}
+
+.user-stats .user-stat.big::after {
+    top: 8px;
+}
+
+.user-stats .user-stat::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: #eaeaf5;
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+
+.user-stats .user-stat:last-child::after {
+    display: none;
+}
+
+/*-----------------------------
+    12. USER STAT
+-----------------------------*/
+.user-stat {
+    padding: 0 24px;
+}
+
+.user-stat.big {
+    padding: 0 30px;
+}
+
+.user-stat.big .reference-bullet {
+    margin: 0 auto 20px;
+}
+
+.user-stat.big .user-stat-title {
+    font-size: 1.375rem;
+}
+
+.user-stat.big .user-stat-text {
+    font-size: 0.75rem;
+}
+
+.user-stat .user-stat-title,
+.user-stat .user-stat-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.user-stat .user-stat-title {
+    font-size: 0.875rem;
+}
+
+.user-stat .user-stat-title .user-stat-title-icon.positive {
+    fill: #23d2e2;
+}
+
+.user-stat .user-stat-title .user-stat-title-icon.negative {
+    fill: #f9515c;
+}
+
+.user-stat .user-stat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-stat .user-stat-icon + .user-stat-text {
+    margin-top: 12px;
+}
+
+.user-stat .user-stat-image {
+    display: block;
+    width: 24px;
+    height: 16px;
+}
+
+.user-stat .user-stat-image + .user-stat-text {
+    margin-top: 15px;
+}
+
+.user-stat .user-stat-text {
+    margin-top: 10px;
+    color: #adafca;
+    font-size: 0.6875rem;
+}
+
+.user-stat .rating-list {
+    margin-top: 10px;
+}
+
+/*-----------------------------
+    13. BADGE LIST
+-----------------------------*/
+.badge-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 32px);
+    grid-gap: 14px;
+}
+
+.badge-list.align-left {
+    justify-content: flex-start;
+}
+
+.badge-list.small {
+    grid-gap: 8px;
+}
+
+/*-----------------------------
+    14. BADGE ITEM
+-----------------------------*/
+.badge-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 35px;
+    position: relative;
+}
+
+.badge-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.badge-item .badge-item-text {
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    position: relative;
+    top: 1px;
+    z-index: 2;
+}
+
+*--------------------
+MEDIA QUERIES
+--------------------*
+@media screen and (max-width: 480px) {
+    .hide-text-mobile {
+        display: none;
+    }
+}
