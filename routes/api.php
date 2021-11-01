@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +20,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('cl_user/{id}', function (Request $request) {
+    $user = User::where('id', $request->id)->first();
+
+    return $user;
+});
+
+Route::get('cl_user_profile/{id}', function (Request $request) {
+    $profile = Profile::where('id', $request->id)->first();
+
+    return $profile;
 });

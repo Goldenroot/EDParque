@@ -17,8 +17,10 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->text('about')->nullable();
-            $table->string('location')->nullable();
+            $table->string('country')->default('Portugal');
+            $table->string('language')->default('Portuguesa');
             $table->longText('banner')->nullable();
+            $table->integer('completion')->default('20');
             $table->timestamps();
         });
     }

@@ -997,6 +997,685 @@ html::-webkit-scrollbar-thumb {
     z-index: 2;
 }
 
+/*--------------------
+    1. WIDGET BOX
+--------------------*/
+.widget-box {
+    padding: 32px 28px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+    position: relative;
+}
+
+.widget-box.no-padding {
+    padding: 0;
+}
+
+.widget-box.no-padding .widget-box-title {
+    padding: 32px 28px 0;
+}
+
+.widget-box .widget-box-settings {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    z-index: 9999;
+}
+
+.widget-box .widget-box-controls {
+    position: absolute;
+    top: 28px;
+    right: 22px;
+    z-index: 9999;
+}
+
+.widget-box .widget-box-controls .slider-controls {
+    display: flex;
+}
+
+.widget-box .widget-box-controls .slider-controls .slider-control:first-child {
+    margin-right: 2px;
+}
+
+.widget-box .widget-box-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget-box .widget-box-actions .widget-box-action {
+    display: flex;
+}
+
+.widget-box .widget-box-actions .widget-box-action .reference-item-list {
+    position: relative;
+    top: -3px;
+}
+
+.widget-box .widget-box-actions .widget-box-action .form-select.v2 {
+    top: -6px;
+}
+
+.widget-box .widget-box-footer .reference-item-list {
+    margin-top: 12px;
+}
+
+.widget-box .widget-box-footer .chart-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding-left: 36px;
+}
+
+.widget-box .widget-box-content-slider .reaction-stats + .reaction-stats {
+    margin-top: 40px;
+}
+
+.widget-box .widget-box-content-slider .badge-item-stat .text-sticker {
+    top: 32px;
+    right: 18px;
+}
+
+.widget-box .widget-box-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.widget-box .widget-box-title .highlighted {
+    color: #00c7d9;
+}
+
+.widget-box .widget-box-text {
+    font-size: 0.875rem;
+    line-height: 1.7142857143em;
+    font-weight: 500;
+}
+
+.widget-box .widget-box-text.light {
+    color: #8f91ac;
+}
+
+.widget-box .widget-box-content {
+    margin-top: 36px;
+}
+
+.widget-box .widget-box-content:first-child {
+    margin-top: 0;
+}
+
+.widget-box .widget-box-content.small-margin-top {
+    margin-top: 28px;
+}
+
+.widget-box .widget-box-content.no-margin-top {
+    margin-top: 0;
+}
+
+.widget-box .widget-box-content.padded-for-scroll {
+    height: 358px;
+    padding-bottom: 28px;
+}
+
+.widget-box .widget-box-content.padded-for-scroll.small {
+    height: 320px;
+}
+
+.widget-box .widget-box-content.padded-for-scroll.medium {
+    height: 676px;
+}
+
+.widget-box .widget-box-content.padded-for-scroll .scroll-content {
+    padding: 0 28px;
+}
+
+.widget-box .widget-box-content.padded-for-scroll .exp-line-list {
+    padding-top: 8px;
+}
+
+.widget-box .widget-box-content .paragraph + .information-line-list {
+    margin-top: 24px;
+}
+
+.widget-box .widget-box-content .filters + .user-status-list,
+.widget-box .widget-box-content .filters + .post-preview-line-list {
+    margin-top: 24px;
+}
+
+.widget-box .widget-box-content .week-box:last-child {
+    margin: 22px 0 -60px;
+}
+
+.widget-box .widget-box-content .calendar {
+    margin: 0 auto;
+}
+
+.widget-box .widget-box-content .calendar-events-preview {
+    margin-top: 24px;
+}
+
+.widget-box .widget-box-content .ordered-item-list {
+    margin-top: 18px;
+}
+
+.widget-box .widget-box-content .progress-arc-wrap {
+    margin: 0 auto;
+}
+
+.widget-box .widget-box-content .draggable-items + .widget-box-text {
+    margin-top: 32px;
+}
+
+.widget-box .widget-box-content .user-stats {
+    margin-top: 36px;
+}
+
+.widget-box .widget-box-content .user-stats.reference .user-stat {
+    width: 100%;
+}
+
+.widget-box .widget-box-content .user-stats.reference .user-stat::after {
+    height: 40px;
+    top: 20px;
+}
+
+.widget-box .widget-box-content .user-stats + .user-stats {
+    margin-top: 32px;
+}
+
+.widget-box .achievement-status-list {
+    margin-top: 50px;
+}
+
+.widget-box .widget-box-status {
+    padding-top: 24px;
+    position: relative;
+}
+
+.widget-box .widget-box-status .widget-box-status-content {
+    padding: 0 28px;
+}
+
+.widget-box .widget-box-status .widget-box-status-content .user-status {
+    font-family: "Rajdhani", sans-serif;
+    padding-right: 70px;
+}
+
+.widget-box .widget-box-status .widget-box-status-content .user-status .user-status-title .user-avatar {
+    display: inline;
+    margin-right: 24px;
+}
+
+.widget-box .widget-box-status .user-status + .widget-box-status-text {
+    margin-top: 20px;
+}
+
+.widget-box .widget-box-status .widget-box-status-text {
+    font-size: 0.875rem;
+    line-height: 1.7142857143em;
+    font-weight: 500;
+}
+
+.widget-box .widget-box-status .widget-box-status-text + .widget-box-status-text {
+    margin-top: 26px;
+}
+
+.widget-box .widget-box-status .widget-box-status-text + .tag-list {
+    margin-top: 8px;
+}
+
+.widget-box .widget-box-status .widget-box-picture {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.widget-box .widget-box-status .tag-sticker,
+.widget-box .widget-box-status .text-sticker {
+    position: absolute;
+    top: -8px;
+    right: 68px;
+}
+
+.widget-box .widget-box-status .post-preview,
+.widget-box .widget-box-status .quote-box {
+    margin-top: 28px;
+}
+
+.widget-box .widget-box-status .video-status,
+.widget-box .widget-box-status .iframe-wrap,
+.widget-box .widget-box-status .poll-box,
+.widget-box .widget-box-status .picture-collage,
+.widget-box .widget-box-status .widget-box {
+    margin-top: 24px;
+}
+
+.widget-box .widget-box-status .widget-box {
+    padding-bottom: 32px;
+}
+
+.widget-box .widget-box-status .tag-list {
+    margin-top: 28px;
+}
+
+.widget-box .widget-box-status .tag-list:first-child {
+    margin-top: 18px;
+}
+
+.widget-box .widget-box-status .content-actions {
+    margin-top: 28px;
+    border-top: 1px solid #eaeaf5;
+}
+
+.widget-box .widget-box-button {
+    width: 100%;
+    margin-top: 32px;
+}
+
+/*--------------------
+    MEDIA QUERIES
+--------------------*/
+@media screen and (max-width: 1365px) {
+    .widget-box .widget-box-footer .chart-info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .widget-box .widget-box-status > .text-sticker .text-sticker-icon {
+        margin-right: 0;
+    }
+    .widget-box .widget-box-status > .text-sticker .text-sticker-content {
+        display: none;
+    }
+    .widget-box .widget-box-actions .widget-box-action:last-child .reference-item-list {
+        position: absolute;
+        top: 60px;
+        left: 28px;
+    }
+}
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .form-box
+-------------------------------------------------------------------*/
+/*------------------
+    1. FORM BOX
+------------------*/
+.form-box {
+    width: 484px;
+    padding: 64px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+    position: relative;
+}
+
+.form-box .form-box-decoration {
+    position: absolute;
+    top: -14px;
+    left: -80px;
+}
+
+.form-box .form-box-decoration.overflowing {
+    top: -68px;
+}
+
+.form-box .form-box-title {
+    font-size: 1.625rem;
+    text-align: center;
+}
+
+.form-box .form {
+    margin-top: 76px;
+}
+
+.form-box .lined-text {
+    margin-top: 40px;
+}
+
+.form-box .social-links,
+.form-box .form-text {
+    margin-top: 30px;
+}
+
+/*--------------------
+    MEDIA QUERIES
+--------------------*/
+@media screen and (max-width: 500px) {
+    .form-box {
+        padding: 40px 32px;
+    }
+}
+
+/*--------------
+    2. FORM
+--------------*/
+.form {
+    width: 100%;
+}
+
+.form + .button {
+    margin-top: 40px;
+}
+
+/*------------------
+    3. FORM ROW
+------------------*/
+.form-row {
+    width: 100%;
+}
+
+.form-row + .form-row {
+    margin-top: 28px;
+}
+
+.form-row.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-row.space-between .form-item {
+    width: auto;
+}
+
+.form-row.split {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.form-row.split .form-item {
+    margin-right: 16px;
+}
+
+.form-row.split .form-item:last-child {
+    margin-right: 0;
+}
+
+.form-row.split .form-item > * {
+    margin-bottom: 28px;
+}
+
+.form-row.split .form-item > *:last-child {
+    margin-bottom: 0;
+}
+
+/*------------------
+    4. FORM ITEM
+------------------*/
+.form-item {
+    width: 100%;
+}
+
+.form-item.auto-width {
+    width: auto;
+}
+
+.form-item.centered {
+    display: flex;
+    align-items: center;
+}
+
+.form-item.split {
+    display: flex;
+}
+
+.form-item.split.medium > * {
+    margin-right: 16px;
+}
+
+.form-item.split.medium > *:last-child {
+    margin-right: 0;
+}
+
+.form-item.split > * {
+    width: 100%;
+    margin-right: 12px;
+}
+
+.form-item.split > *:last-child {
+    margin-right: 0;
+}
+
+/*------------------------------
+    5. FORM INPUT DECORATED
+------------------------------*/
+.form-input-decorated {
+    position: relative;
+}
+
+.form-input-decorated input[type="text"] {
+    padding-right: 60px;
+}
+
+.form-input-decorated .form-input-icon {
+    fill: #adafca;
+    opacity: .6;
+    pointer-events: none;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+}
+
+/*-------------------
+    6. FORM INPUT
+-------------------*/
+.form-input {
+    position: relative;
+}
+
+.form-input.dark input[type="text"],
+.form-input.dark input[type="password"],
+.form-input.dark textarea {
+    border: none;
+    background-color: #4e4ac8;
+    color: #fff;
+}
+
+.form-input.dark input[type="text"]::placeholder,
+.form-input.dark input[type="password"]::placeholder,
+.form-input.dark textarea::placeholder {
+    color: #8b88ff;
+    opacity: .6;
+}
+
+.form-input.social-input .social-link {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    pointer-events: none;
+}
+
+.form-input.social-input input {
+    padding-left: 64px;
+}
+
+.form-input.social-input label {
+    left: 64px;
+}
+
+.form-input.social-input.active label {
+    left: 58px;
+}
+
+.form-input.currency-decorated::before {
+    content: '$';
+    color: #00c7d9;
+    font-size: 0.875rem;
+    font-weight: 700;
+    position: absolute;
+    top: 12px;
+    left: 22px;
+    pointer-events: none;
+}
+
+.form-input.currency-decorated input {
+    padding-left: 32px;
+}
+
+.form-input.small label,
+.form-input.small input,
+.form-input.small textarea {
+    font-size: 0.875rem;
+}
+
+.form-input.small label {
+    top: 16px;
+}
+
+.form-input.small input {
+    height: 48px;
+}
+
+.form-input.small textarea {
+    height: 100px;
+}
+
+.form-input.small button {
+    width: 64px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.form-input.full {
+    height: 100%;
+}
+
+.form-input.full textarea {
+    height: 100%;
+}
+
+.form-input.mid-textarea textarea {
+    height: 124px;
+}
+
+.form-input.medium-textarea textarea {
+    height: 160px;
+}
+
+.form-input.active label {
+    background-color: #fff;
+    padding: 0 6px;
+    font-size: 0.75rem;
+    top: -6px;
+    left: 12px;
+}
+
+.form-input label {
+    color: #adafca;
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+}
+
+/*-------------------
+    7. FORM TITLE
+-------------------*/
+.form-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/*----------------------
+    8. FORM TEXTAREA
+----------------------*/
+.form-textarea {
+    position: relative;
+}
+
+.form-textarea textarea {
+    font-size: 0.875rem;
+    padding: 26px 28px 0;
+}
+
+.form-textarea .form-textarea-limit-text {
+    padding: 0 28px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: .6;
+    text-align: right;
+}
+
+/*----------------------
+    9. FORM SELECT
+----------------------*/
+.form-select {
+    width: 100%;
+    height: 48px;
+    position: relative;
+}
+
+.form-select.v2 {
+    width: auto;
+    height: auto;
+}
+
+.form-select.v2 select {
+    width: auto;
+    height: auto;
+    padding-right: 20px;
+    border: none;
+    font-size: 0.75rem;
+}
+
+.form-select.v2 .form-select-icon {
+    top: 10px;
+    right: 0;
+}
+
+.form-select select {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.form-select .form-select-icon {
+    fill: #3e3f5e;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    pointer-events: none;
+}
+
+.form-select label {
+    padding: 0 6px;
+    background-color: #fff;
+    color: #adafca;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    pointer-events: none;
+}
+
+/*------------------------
+    10. CHECKBOX LINE
+------------------------*/
+.checkbox-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-line .checkbox-line-text {
+    color: #00c7d9;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
 *--------------------
 MEDIA QUERIES
 --------------------*
@@ -1004,4 +1683,246 @@ MEDIA QUERIES
     .hide-text-mobile {
         display: none;
     }
+}
+
+
+/*-----------------
+    1. GENERAL
+-----------------*/
+label,
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+button {
+    font-family: "Rajdhani", sans-serif;
+}
+
+label {
+    display: block;
+    margin: 0;
+    color: #3e3f5e;
+    line-height: 1em;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+button {
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    background-color: #fff;
+    border: 1px solid #dedeea;
+    color: #3e3f5e;
+    transition: border-color .2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #615dfa;
+}
+
+input[type="text"],
+input[type="password"] {
+    height: 54px;
+    padding: 0 18px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #adafca;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+textarea {
+    padding: 14px 18px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #adafca;
+    font-weight: 600;
+}
+
+input[type=password], input[type=text] {
+    height: 54px;
+    padding: 0 18px;
+}
+
+
+input[type=password], input[type=text], select, textarea {
+    background-color: #fff;
+    border: 1px solid #dedeea;
+    color: #3e3f5e;
+    transition: border-color .2s ease-in-out;
+}
+
+input[type=password], input[type=text] {
+    height: 54px !important;
+    padding: 0 18px !important;
+}
+
+.form-row.split .form-item {
+    margin-right: 16px;
+}
+
+@media screen and (max-width: 960px) {
+    .form-row.split .form-item {
+        margin-bottom: 28px;
+    }
+}
+
+*, :after, :before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.section-banner {
+    min-height: 160px;
+    padding: 52px 60px 0 200px ;
+    border-radius: 12px;
+    background: #4bc1fd no-repeat 50%;
+    position: relative;
+}
+
+.section-banner .section-banner-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.section-banner .section-banner-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.section-banner .section-banner-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.section-banner .section-banner-text, .section-banner .section-banner-title {
+    color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    .section-banner .section-banner-text {
+        margin-top: 6px;
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .section-banner .section-banner-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .section-banner .section-banner-icon {
+        width: 92px;
+        height: 86px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .section-banner {
+        height: 86px;
+        min-height: auto;
+        padding: 18px 28px 0 108px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .content-grid {
+        max-width: 100%;
+        padding: 112px 112px 200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .content-grid {
+        max-width: 1142px;
+    }
+}
+.content-grid {
+    max-width: 1184px;
+    padding: 112px 0 100px;
+}
+
+.user-preview {
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgb(94 92 154 / 6%);
+}
+
+user-preview .user-preview-cover {
+    height: 96px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.user-preview .user-preview-info {
+    padding: 0 28px 32px;
+    position: relative;
+}
+
+.user-short-description {
+    padding-top: 84px;
+    position: relative;
+}
+
+.user-avatar.medium {
+    width: 120px;
+    height: 132px;
+}
+
+.user-short-description .user-short-description-avatar {
+    position: absolute;
+    top: -54px;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.user-preview .user-preview-info .user-short-description .user-short-description-title {
+    font-size: 1.25rem;
+}
+
+.user-short-description .user-short-description-text, .user-short-description .user-short-description-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+.grid.grid-3-3-3, .grid.grid-3-3-3-3 {
+    grid-template-columns: repeat(auto-fit,284px);
+}
+
+.grid.centered {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 16px;
+    -ms-flex-align: start;
+    align-items: start;
 }

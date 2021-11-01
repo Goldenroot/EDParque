@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +25,16 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function newsfeed(){
+        return view("newsfeed");
+    }
+
+    public function view_students(){
+        $students = User::All();
+
+        return view('people.list', ["students" => $students]);
     }
 
 }
