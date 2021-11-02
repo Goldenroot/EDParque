@@ -843,6 +843,14 @@ textarea::placeholder{
     max-width:100%;
     padding:80px 80px 0
 }
+
+.content-grid{
+    max-width: 74%;
+    padding: 112 px 112 px 200 px ;
+    margin: 0 auto;
+    transition: transform 0.4s ease-in-out 0s;
+}
+
 .content-grid.medium{
     max-width:784px;
     padding:0 0 100px
@@ -1080,6 +1088,9 @@ textarea::placeholder{
         padding:0 112px 200px
     }
 }
+
+
+
 @media screen and (max-width:1365px){
     .content-grid .account-hub-content .section-header:first-child{
         margin-top:60px

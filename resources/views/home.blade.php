@@ -12,7 +12,7 @@
 
     <script src="{{ URL::asset('js/app.js') }}" defer></script>
 
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
     <left-side-menu></left-side-menu>
     <right-side-menu></right-side-menu>
 
-    <div class="content-grid" style="transform: translate(10%, 0px); transition: transform 0.4s ease-in-out 0s;">
+    <div class="content-grid">
         <div class="grid grid-3-6-3 mobile-prefer-content">
 
             <div class="grid-column">
