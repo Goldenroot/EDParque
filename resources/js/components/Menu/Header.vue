@@ -1,4 +1,7 @@
 <template>
+
+    <div>
+
     <header style="z-index: 3" class="header">
 
         <div class="header-actions">
@@ -36,15 +39,15 @@
             <nav class="navigation">
                 <ul class="menu-main">
                     <li class="menu-main-item">
-                        <a class="menu-main-item-link" href="#">Home</a>
+                        <a class="menu-main-item-link" href="/home">Home</a>
                     </li>
 
                     <li class="menu-main-item">
-                        <a class="menu-main-item-link" href="#">Convites</a>
+                        <a class="menu-main-item-link" href="/invites">Convites</a>
                     </li>
 
                     <li class="menu-main-item">
-                        <a class="menu-main-item-link" href="#">Grupos</a>
+                        <a class="menu-main-item-link" href="/groups">Grupos</a>
                     </li>
 
                 </ul>
@@ -127,11 +130,33 @@
             </div>
         </div>
     </header>
+
+    <left-side-menu v-if="LeftActiveTab === 'LeftSideMenu'"></left-side-menu>
+    <right-side-menu v-if="RightActiveTab === 'RightSideMenu'"></right-side-menu>
+
+    </div>
+
 </template>
 
 <script>
+
+import LeftSideMenu from "./LeftSideMenu";
+import RightSideMenu from "./RightSideMenu";
+
 export default {
-    name: "Header"
+    name: "Header",
+
+    components: {
+        LeftSideMenu,
+        RightSideMenu,
+    },
+
+    data(){
+        return{
+            LeftActiveTab: 'LeftSideMenu',
+            RightActiveTab: 'RightSideMenu',
+        }
+    }
 }
 </script>
 

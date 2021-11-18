@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="progress-arc-info">
-                    <p class="progress-arc-title">30%</p>
+                    <p class="progress-arc-title">{{this.user_completion}}%</p>
                 </div>
             </div>
 
@@ -24,7 +24,23 @@
 
 <script>
 export default {
-    name: "ProfileCompletionWidget"
+    name: "ProfileCompletionWidget",
+
+
+    props: ["user_id"],
+
+    data(){
+        return{
+            user_completion : '',
+        }
+    },
+
+    mounted() {
+        window.axios.get('/api/cl_user/' + this.user_id).then(res => {
+            this.user = res.data;
+            this.user_completion = this.user['0']['profile']['completion'];
+        });
+    }
 }
 </script>
 

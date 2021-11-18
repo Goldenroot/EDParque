@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        EDParque - Home
+        EDParque - Perfil de {{$person->name}}
     </title>
 
 
     <script src="{{ URL::asset('js/app.js') }}" defer></script>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -120,9 +120,9 @@
                         </div>
                     </a>
 
-                    <p class="user-short-description-title"><a href="profile-timeline.html">{{Auth::User()->name}}</a></p>
+                    <p class="user-short-description-title"><a href="profile-timeline.html">{{$person->name}}</a></p>
 
-                    <p class="user-short-description-text"><a href="#"><span>@</span>{{Auth::User()->slug}}</a></p>
+                    <p class="user-short-description-text"><a href="#"><span>@</span>{{$person->slug}}</a></p>
                 </div>
 
                 <div class="user-stats">
@@ -143,6 +143,12 @@
 
                         <p class="user-stat-text">Visitas</p>
                     </div>
+
+                </div>
+
+                <div class="profile-header-info-actions">
+                    <p class="profile-header-info-action button secondary"><span class="hide-text-mobile"></span> Adicionar Amigo</p>
+                    <p class="profile-header-info-action button primary"><span class="hide-text-mobile"></span> Enviar Mensagem</p>
                 </div>
             </div>
         </div>
@@ -151,7 +157,7 @@
 
             <div class="grid-column">
 
-                <about-me-widget user_id="{{Auth::User()->id}}"></about-me-widget>
+                <about-me-widget user_id="{{$person->id}}"></about-me-widget>
 
                 <div class="widget-box">
                     <!-- WIDGET BOX SETTINGS -->

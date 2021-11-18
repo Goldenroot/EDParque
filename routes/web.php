@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\FriendshipController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Models\User;
+use App\Traits\Friendable;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,10 +41,16 @@ Route::get("/settings", [ProfileController::class, "settings"])->name("settings"
 
 //People
 
+Route::get("profile/{slug}", [HomeController::class, "view_person_profile"])->name("view_person_profile");
+
 Route::get("/estudantes", [HomeController::class, "view_students"])->name("view_students");
 
-Route::get('/check_relationship_status/{id}', function ($id){
-    User::find($id);
+Route::get("/check/{id}", [FriendshipController::class, "check"])->name("check_friends");
 
+Route::get("/add_friend/{id}", [FriendshipController::class, "add_friend"])->name("add_friend");
+
+Route::get("/accept_friend/{id}", [FriendshipController::class, "accept_friend"])->name("accept_friend");
+
+Route::get("/get_friends", function (){
+    return Auth::user()->friends();
 });
-

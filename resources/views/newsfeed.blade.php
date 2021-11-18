@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        EDParque - NewsFeed
+        EDParque - Newsfeed
     </title>
 
 
@@ -30,7 +30,7 @@
     <left-side-menu></left-side-menu>
     <right-side-menu></right-side-menu>
 
-    <div class="content-grid" style="transform: translate(10%, 0px); transition: transform 0.4s ease-in-out 0s;">
+    <div class="content-grid">
 
         <div class="profile-header">
             <!-- PROFILE HEADER COVER -->

@@ -76,7 +76,7 @@ trait Friendable{
             ->get();
 
         foreach($f1 as $friendship):
-            array_push($friends, \App\User::find($friendship->user_requested));
+            array_push($friends, User::find($friendship->user_requested));
         endforeach;
 
 
@@ -87,7 +87,7 @@ trait Friendable{
             ->get();
 
         foreach($f2 as $friendship):
-            array_push($friends2, \App\User::find($friendship->requester));
+            array_push($friends2, User::find($friendship->requester));
         endforeach;
 
         return array_merge($friends, $friends2);
@@ -141,7 +141,7 @@ trait Friendable{
             ->where('requester', $this->id)
             ->get();
         foreach($friendships as $friendship):
-            array_push($users, \App\User::find($friendship->user_requested));
+            array_push($users, User::find($friendship->user_requested));
         endforeach;
 
         return $users;

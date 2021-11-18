@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+window.moment = require('vue-moment');
 window.axios = require('axios');
 
 /**
@@ -44,6 +45,7 @@ Vue.component('calendar-widget', require('./components/User/CalendarWidget.vue')
 Vue.component('about-me-widget', require('./components/User/AboutMeWidget.vue').default);
 Vue.component('friends-widget', require('./components/User/FriendsWidget.vue').default);
 Vue.component('profile-completion-widget', require('./components/User/ProfileCompletionWidget.vue').default);
+Vue.component('school-widget', require('./components/User/SchoolWorkWidget.vue').default);
 
 //Weather
 Vue.component('weather-app', require('./components/Weather/WeatherApp.vue').default);

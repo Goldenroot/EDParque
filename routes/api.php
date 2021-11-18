@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FriendshipController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Profile;
 use App\Models\User;
@@ -23,13 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('cl_user/{id}', function (Request $request) {
-    $user = User::where('id', $request->id)->first();
+    $user = User::where('id', $request->id)->with('profile')->get();
 
     return $user;
-});
-
-Route::get('cl_user_profile/{id}', function (Request $request) {
-    $profile = Profile::where('id', $request->id)->first();
-
-    return $profile;
 });

@@ -33,41 +33,23 @@
         <div class="widget-box-content">
 
             <div class="user-status-list">
-
-                <div class="user-status request-small">
-                    <!-- USER STATUS AVATAR -->
-                    <a class="user-status-avatar" href="profile-timeline.html">
-                        <!-- USER AVATAR -->
+                <div v-for="f of friends" class="user-status request-small">
+                    <a class="user-status-avatar" href="">
                         <div class="user-avatar small no-outline">
-                            <!-- USER AVATAR CONTENT -->
                             <div class="user-avatar-content">
-                                <!-- HEXAGON -->
-                                <div class="hexagon-image-30-32" data-src="img/avatar/03.jpg" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
+                                <div class="hexagon-image-30-32" data-src="" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
                             </div>
-                            <!-- /USER AVATAR CONTENT -->
 
-                            <!-- USER AVATAR PROGRESS -->
                             <div class="user-avatar-progress">
-                                <!-- HEXAGON -->
                                 <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
                             </div>
-                            <!-- /USER AVATAR PROGRESS -->
 
-                            <!-- USER AVATAR PROGRESS BORDER -->
                             <div class="user-avatar-progress-border">
-                                <!-- HEXAGON -->
                                 <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
                             </div>
-                            <!-- /USER AVATAR PROGRESS BORDER -->
 
-                            <!-- USER AVATAR BADGE -->
                             <div class="user-avatar-badge">
-                                <!-- USER AVATAR BADGE BORDER -->
                                 <div class="user-avatar-badge-border">
-                                    <!-- HEXAGON -->
                                     <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
                                     <!-- /HEXAGON -->
                                 </div>
@@ -85,49 +67,49 @@
                                 <p class="user-avatar-badge-text">16</p>
                                 <!-- /USER AVATAR BADGE TEXT -->
                             </div>
-                            <!-- /USER AVATAR BADGE -->
                         </div>
-                        <!-- /USER AVATAR -->
                     </a>
-                    <!-- /USER STATUS AVATAR -->
 
-                    <!-- USER STATUS TITLE -->
-                    <p class="user-status-title"><a class="bold" href="profile-timeline.html">Nome do Amigo</a></p>
-                    <!-- /USER STATUS TITLE -->
+                    <p class="user-status-title"><a class="bold" href="">{{friend_name}}</a></p>
 
-                    <!-- USER STATUS TEXT -->
-                    <p class="user-status-text small">5 amigos em comum</p>
-                    <!-- /USER STATUS TEXT -->
-
-                    <!-- ACTION REQUEST LIST -->
+                    <p class="user-status-text small"><span>@</span>{{friend_slug}}</p>
                     <div class="action-request-list">
-                        <!-- ACTION REQUEST -->
                         <div class="action-request accept">
-                            <!-- ACTION REQUEST ICON -->
                             <svg class="action-request-icon icon-add-friend">
                                 <use xlink:href="#svg-add-friend"></use>
                             </svg>
-                            <!-- /ACTION REQUEST ICON -->
                         </div>
-                        <!-- /ACTION REQUEST -->
                     </div>
-                    <!-- ACTION REQUEST LIST -->
                 </div>
-
             </div>
-            <!-- /USER STATUS LIST -->
-        </div>
-        <!-- WIDGET BOX CONTENT -->
 
-        <!-- WIDGET BOX BUTTON -->
-        <a class="widget-box-button button small secondary" href="profile-friends.html">Ver Todos</a>
-        <!-- /WIDGET BOX BUTTON -->
+        </div>
+        <a class="widget-box-button button small secondary" href="/friends">Ver Todos</a>
     </div>
 </template>
 
 <script>
 export default {
-    name: "FriendsWidget"
+    name: "FriendsWidget",
+
+    data(){
+        return{
+            friends : "",
+            friend_name: "",
+            friend_image : "",
+        }
+    },
+
+    mounted() {
+        window.axios.get("/get_friends").then(res => {
+            this.friend = res.data[0];
+            this.friends = res.data.length;
+            this.friend_name = this.friend["name"];
+            this.friend_slug = this.friend["slug"];
+            this.friend_image = this.friend["avatar"];
+            console.log(res.data)
+        })
+    }
 }
 </script>
 

@@ -71,11 +71,7 @@ export default {
             this.student_name = this.student['name'];
             this.student_slug = this.student['slug'];
             this.student_avatar = this.student['avatar'];
-        });
-
-        window.axios.get('/api/cl_user_profile/' + this.student_id).then(res => {
-            this.student_profile = res.data;
-            this.student_banner = this.student_profile['banner'];
+            this.student_banner = this.student['banner'];
         });
 
         window.axios.get('/check_relationship_status/' + this.student_id).then(res => {
