@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,8 +38,10 @@ class FriendshipController extends Controller
         return Auth::user()->accept_friend($id);
     }
 
-    public function friends_list(){
-        return Auth::user()->friends();
+    public function friends_list($id){
+        $user = User::where('id', $id)->first();
+
+        return $user->friends();
     }
 
 }

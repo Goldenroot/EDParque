@@ -37,7 +37,7 @@
 
                 <school-widget></school-widget>
 
-                <friends-widget></friends-widget>
+                <friends-widget user_id="{{Auth::User()->id}}"></friends-widget>
 
             </div>
 

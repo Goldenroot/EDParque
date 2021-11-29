@@ -9,17 +9,16 @@
         EDParque - Estudantes
     </title>
 
-    <!-- JQuery  -->
-    <script src="{{ URL::asset('js/jquery-3.6.0.js') }}" defer></script>
 
     <script src="{{ URL::asset('js/app.js') }}" defer></script>
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}" defer></script>
-    <script src="{{ URL::asset('js/popper.min.js') }}" defer></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <link href="{{ URL::asset('css/teste.css') }} " rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-
 </head>
 
 @include("layouts.loader")
@@ -30,22 +29,14 @@
     <header-menu></header-menu>
     <right-side-menu></right-side-menu>
 
-<div class="content-grid" style="transform: translate(10%, 0px); transition: transform 0.4s ease-in-out 0s;">
+<div class="content-grid">
     <div class="section-banner" style="background-image: -webkit-linear-gradient(0deg, #03a9f4 0%, #4fc3f7 100%);">
-        <!-- SECTION BANNER ICON -->
         <img class="section-banner-icon" src="img/banner/members-icon.png" alt="members-icon">
-        <!-- /SECTION BANNER ICON -->
-
-        <!-- SECTION BANNER TITLE -->
         <p class="section-banner-title">Estudantes [{{count($students)}}]</p>
-        <!-- /SECTION BANNER TITLE -->
-
-        <!-- SECTION BANNER TEXT -->
         <p class="section-banner-text">Procura todos os estudantes!</p>
-        <!-- /SECTION BANNER TEXT -->
     </div>
 
-    <div class="grid grid-3-3-3 centered" id="app">
+    <div class="grid grid-3-3-3 centered">
 
         @foreach($students as $student)
             <student-card :student_id="{{$student->id}}"></student-card>

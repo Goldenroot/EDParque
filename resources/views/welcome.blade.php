@@ -229,7 +229,7 @@ Texto sobre o website
             <div class="row">
                 <div class="col-lg-12">
                     <div class="subscribe-area" id="subscribe-box">
-                        <div class="obj"><img src="assets/images/elements/subscribe.png" alt="image"></div>
+                        <div class="obj"><img src="/images/subscribe.png" alt="image"></div>
                         <div class="subscribe-content">
                             <h2 class="title">Tens alguma dúvida?</h2>
                             <p>Envia-nos um Email!</p>
@@ -250,13 +250,7 @@ Texto sobre o website
 
                 </div>
                 <div class="col-lg-5 col-md-6 mt-md-0 mt-3">
-                    <ul class="social-links justify-content-md-end justify-content-center">
-                        <li><a href="#0"><i class="lab la-facebook-f"></i></a></li>
-                        <li><a href="#0"><i class="lab la-twitter"></i></a></li>
-                        <li><a href="#0"><i class="lab la-pinterest-p"></i></a></li>
-                        <li><a href="#0"><i class="lab la-google-plus"></i></a></li>
-                        <li><a href="#0"><i class="lab la-instagram"></i></a></li>
-                    </ul>
+
                 </div>
             </div>
         </div>

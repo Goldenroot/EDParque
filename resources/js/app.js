@@ -7,7 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-window.moment = require('vue-moment');
 window.axios = require('axios');
 
 /**
@@ -33,6 +32,7 @@ Vue.component('settings-seguranca', require('./components/SettingsMenu/Settings_
 
 
 Vue.component('student-card', require('./components/Students/StudentCard.vue').default);
+Vue.component('add-student', require('./components/Students/AddStudent.vue').default);
 
 //Menus
 Vue.component('left-side-menu', require('./components/Menu/LeftSideMenu.vue').default);
@@ -50,6 +50,9 @@ Vue.component('school-widget', require('./components/User/SchoolWorkWidget.vue')
 //Weather
 Vue.component('weather-app', require('./components/Weather/WeatherApp.vue').default);
 
+
+//Messenger
+Vue.component('chat-app', require('./components/Chat/ChatApp.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

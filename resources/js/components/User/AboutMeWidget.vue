@@ -43,8 +43,6 @@
 
 <script>
 
-import moment from 'moment'
-
 export default {
     name: "AboutMe",
 

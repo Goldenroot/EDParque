@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\FriendshipController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -27,6 +28,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -51,6 +53,20 @@ Route::get("/add_friend/{id}", [FriendshipController::class, "add_friend"])->nam
 
 Route::get("/accept_friend/{id}", [FriendshipController::class, "accept_friend"])->name("accept_friend");
 
-Route::get("/get_friends", function (){
-    return Auth::user()->friends();
+Route::get("/get_friends/{id}", function ($id){
+    $user = User::where('id', $id)->first();
+
+    return $user->friends();
 });
+
+// Messenger
+
+Route::get("/messenger",  [ContactsController::class, "messenger"])->name("messenger");
+
+Route::get("/contacts",  [ContactsController::class, "get"])->name("get_contacts");
+
+Route::get("/conversation/{id}",  [ContactsController::class, "getMessagesFor"])->name("getMessagesFor");
+
+Route::post("/conversation/send",  [ContactsController::class, "send"])->name("send_message");
+
+
