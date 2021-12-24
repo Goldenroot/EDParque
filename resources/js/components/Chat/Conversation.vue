@@ -38,8 +38,8 @@
                 <p class="user-status-tag online" v-if="contact"><span>@</span>{{contact.slug}}</p>
             </div>
         </div>
-        <MessageFeed :contact="contact" :messages="messages"></MessageFeed>
-        <MessageComposer  @send="sendMessage"></MessageComposer>
+        <MessageFeed :contact="contact" :messages="messages" ></MessageFeed>
+        <MessageComposer  @send="sendMessage" v-if="contact" ></MessageComposer>
     </div>
 </template>
 

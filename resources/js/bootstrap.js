@@ -21,6 +21,7 @@ try {
 
 window.axios = require('axios');
 
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
@@ -31,6 +32,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 import Echo from "laravel-echo";
 import Pusher from "pusher-js";
+import Donut from 'vue-css-donut-chart';
+import 'vue-css-donut-chart/dist/vcdonut.css';
 
 
 window.Pusher = require('pusher-js');

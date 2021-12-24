@@ -21,11 +21,22 @@
                     </div>
                 </div>
             </div>
+
             <div class="form-item auto-width">
                 <p class="button primary padded" v-on:click="send">
-                    <svg class="button-icon no-space icon-send-message">
-                        <use xlink:href="#svg-send-message"></use>
-                    </svg>
+                    <i class="fas fa-paper-plane"></i>
+                </p>
+            </div>
+
+            <div class="form-item auto-width">
+                <p class="button padded">
+                    <i class="fas fa-camera"></i>
+                </p>
+            </div>
+
+            <div class="form-item auto-width">
+                <p class="button padded">
+                    <i class="far fa-laugh"></i>
                 </p>
             </div>
         </div>
@@ -33,6 +44,8 @@
 </template>
 
 <script>
+import UploadImages from "vue-upload-drop-images"
+
 export default {
     name: "MessageComposer",
 
@@ -52,7 +65,11 @@ export default {
             this.$emit('send', this.message);
             this.message = '';
         }
-    }
+    },
+
+    components: {
+        UploadImages,
+    },
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Contacts :contacts="contacts" @selected="startConversationWith"></Contacts>
+        <Contacts :contacts="contacts" :messages="messages" @selected="startConversationWith"></Contacts>
         <conversation :contact="selectedContact" :messages="messages" @new="saveNewMessage"></conversation>
     </div>
 </template>

@@ -23,38 +23,33 @@
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Amigos Pendentes">
-                    <i class="fas fa-user-clock" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
-                </a>
-            </li>
-
-            <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Descobrir Pessoas">
+                <a class="menu-item-link text-tooltip-tfr" href="/amigos" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Descobrir Pessoas">
                     <i class="fas fa-user-plus" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Mensagens">
+                <a class="menu-item-link text-tooltip-tfr" href="/pedidos" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Amigos Pendentes">
+                    <i class="fas fa-user-clock" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
+                </a>
+            </li>
+
+
+            <li class="menu-item">
+                <a class="menu-item-link text-tooltip-tfr" href="/messenger" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Mensagens">
                     <i class="far fa-comment-alt" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                 </a>
             </li>
 
 
             <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Crachás">
-                    <i class="fal fa-medal" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
-                </a>
-            </li>
-
-            <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Notificações">
+                <a class="menu-item-link text-tooltip-tfr" href="/notificacoes" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Notificações">
                     <i class="fas fa-bell" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Definições">
+                <a class="menu-item-link text-tooltip-tfr" href="/definicoes" style="position: relative;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Definições">
                     <i class="fas fa-cog" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                 </a>
             </li>

@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 window.axios = require('axios');
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -46,13 +47,14 @@ Vue.component('about-me-widget', require('./components/User/AboutMeWidget.vue').
 Vue.component('friends-widget', require('./components/User/FriendsWidget.vue').default);
 Vue.component('profile-completion-widget', require('./components/User/ProfileCompletionWidget.vue').default);
 Vue.component('school-widget', require('./components/User/SchoolWorkWidget.vue').default);
+Vue.component('group-widget', require('./components/Groups/GroupWidget.vue').default);
 
 //Weather
 Vue.component('weather-app', require('./components/Weather/WeatherApp.vue').default);
 
-
 //Messenger
 Vue.component('chat-app', require('./components/Chat/ChatApp.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -88,11 +88,15 @@ export default {
         contacts: {
             type: Array,
             default: []
+        },
+        messages: {
+            type: Array,
+            default: []
         }
     },
     data() {
         return {
-            selected: this.contacts.length ? this.contacts[0] : null
+            selected: this.contacts.length ? this.contacts[0] : null,
         };
     },
     methods: {
@@ -109,8 +113,8 @@ export default {
                 }
                 return contact.unread;
             }]).reverse();
-        }
-    }
+        },
+    },
 }
 </script>
 

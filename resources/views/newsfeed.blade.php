@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        EDParque - Newsfeed
+        EDParque - NewsFeed
     </title>
 
 
     <script src="{{ URL::asset('js/app.js') }}" defer></script>
 
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 
     <link href="{{ URL::asset('css/teste.css') }} " rel="stylesheet" />
 </head>
@@ -152,135 +153,11 @@
 
             <div class="grid-column">
 
-                <div class="widget-box">
-                    <div class="progress-arc-summary">
-                        <div class="progress-arc-wrap">
+                <profile-completion-widget :user_id="{{Auth::User()->id}}"></profile-completion-widget>
 
-                            <div class="progress-arc"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                <canvas id="profile-completion-chart" style="display: block; height: 140px; width: 140px;" width="280" height="280" class="chartjs-render-monitor"></canvas>
-                            </div>
+                <friends-widget></friends-widget>
 
-                            <div class="progress-arc-info">
-                                <p class="progress-arc-title">{{Auth::User()->profile->completion}}%</p>
-                            </div>
-                        </div>
-
-                        <div class="progress-arc-summary-info">
-                            <p class="progress-arc-summary-title">Finaliza o teu Perfil</p>
-                            <p class="progress-arc-summary-subtitle">{{Auth::User()->name}}</p>
-                            <p class="progress-arc-summary-text">Completa e Atualiza o teu Perfil ao Atualizar Todas as Tuas Informações</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="widget-box">
-
-                    <div class="widget-box-settings">
-                        <div class="post-settings-wrap" style="position: relative;">
-                            <div class="post-settings widget-box-post-settings-dropdown-trigger">
-                                <svg class="post-settings-icon icon-more-dots">
-                                    <use xlink:href="#svg-more-dots"></use>
-                                </svg>
-                            </div>
-
-                            <div class="simple-dropdown widget-box-post-settings-dropdown" style="position: absolute; z-index: 9999; top: 30px; right: 9px; opacity: 0; visibility: hidden; transform: translate(0px, -20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
-                                <p class="simple-dropdown-link">Widget Settings</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="widget-box-title">Estudantes</p>
-
-                    <div class="widget-box-content">
-
-                        <div class="filters">
-                            <p class="filter">Recentes</p>
-                            <p class="filter active">Populares</p>
-                            <p class="filter">Adicionados</p>
-                        </div>
-
-                        <div class="user-status-list">
-                            <div class="user-status request-small">
-                                <a class="user-status-avatar" href="profile-timeline.html">
-
-                                    <div class="user-avatar small no-outline">
-                                        <div class="user-avatar-content">
-                                            <div class="hexagon-image-30-32" data-src="img/avatar/07.jpg" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                        </div>
-
-                                        <div class="user-avatar-progress">
-                                            <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                        </div>
-
-                                        <div class="user-avatar-progress-border">
-                                            <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                        </div>
-
-                                        <div class="user-avatar-badge">
-                                            <div class="user-avatar-badge-border">
-                                                <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                            </div>
-
-                                            <div class="user-avatar-badge-content">
-                                                <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                            </div>
-                                            <p class="user-avatar-badge-text">26</p>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <p class="user-status-title"><a class="bold" href="profile-timeline.html">Sarah Diamond</a></p>
-                                <p class="user-status-text small">24.5K profile views</p>
-
-                                <div class="action-request-list">
-                                    <div class="action-request accept">
-                                        <svg class="action-request-icon icon-add-friend">
-                                            <use xlink:href="#svg-add-friend"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget-box">
-
-                    <p class="widget-box-title">Grupos</p>
-                    <div class="widget-box-content">
-
-                        <div class="filters">
-                            <p class="filter">Recentes</p>
-                            <p class="filter active">Populares</p>
-                            <p class="filter">Meus</p>
-                        </div>
-
-                        <div class="user-status-list">
-                            <div class="user-status request-small">
-                                <a class="user-status-avatar" href="group-timeline.html">
-                                    <div class="user-avatar small no-border">
-                                        <div class="user-avatar-content">
-                                            <div class="hexagon-image-40-44" data-src="img/avatar/27.jpg" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <p class="user-status-title"><a class="bold" href="group-timeline.html">Gaming Watchtower</a></p>
-
-                                <p class="user-status-text small">2.365 members</p>
-
-                                <div class="action-request-list">
-                                    <div class="action-request accept">
-                                        <svg class="action-request-icon icon-join-group">
-                                            <use xlink:href="#svg-join-group"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <group-widget :user_id="{{Auth::User()->id}}"></group-widget>
 
             </div>
 
