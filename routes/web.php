@@ -40,7 +40,6 @@ Route::get('/overview', [HomeController::class, 'overview'])->name('overview');
 
 
 Route::get('/newsfeed', [HomeController::class, 'newsfeed'])->name('newsfeed');
-Route::get('/newsfeed', [HomeController::class, 'newsfeed'])->name('newsfeed');
 
 Route::get('/teste', function (){
 
