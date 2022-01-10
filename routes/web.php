@@ -4,6 +4,9 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\FriendshipController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\WorkController;
+use App\Models\School;
 use App\Models\User;
 use App\Traits\Friendable;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +36,34 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/overview', [HomeController::class, 'overview'])->name('overview');
+
+
 Route::get('/newsfeed', [HomeController::class, 'newsfeed'])->name('newsfeed');
+Route::get('/newsfeed', [HomeController::class, 'newsfeed'])->name('newsfeed');
+
+Route::get('/teste', function (){
+
+    $users = User::with('school')->get();
+    dd($users);
+});
+
+
+//Work
+
+Route::get('/works', [WorkController::class, 'list_works'])->name('list_works');
+
+Route::get('/work/create', [WorkController::class, 'work_create'])->name('work_create');
+
+//Schools
+
+Route::get('/schools', [SchoolController::class, 'list_schools'])->name('list_schools');
+
+Route::get('/school/{id}', [SchoolController::class, 'view_school'])->name('view_school');
+
+Route::get('/add_school/{id}', [SchoolController::class, 'add_school'])->name('add_schools');
+
+Route::get('/get_school/{id}', [SchoolController::class, 'get_school'])->name('get_school');
 
 //My Profile
 
