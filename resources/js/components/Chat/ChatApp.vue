@@ -29,7 +29,7 @@ export default {
     mounted() {
         Echo.private(`messages.${this.user.id}`)
             .listen('NewMessage', (e) => {
-                this.hanleIncoming(e.message);
+                this.handleIncoming(e.message);
             });
         axios.get('/contacts')
             .then((response) => {
@@ -48,7 +48,7 @@ export default {
         saveNewMessage(message) {
             this.messages.push(message);
         },
-        hanleIncoming(message) {
+        handleIncoming(message) {
             if (this.selectedContact && message.from == this.selectedContact.id) {
                 this.saveNewMessage(message);
                 return;

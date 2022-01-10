@@ -12,6 +12,14 @@
   -->
 
     <div class="card" v-bind:class="{ 'card-day' : isDay}">
+        <div>
+              <span style="float: right; padding: 10px; display: flex; font-size: 20px;">
+                <h4 class="clock_shadow">{{time.hours}}:</h4>
+                <h4 class="clock_shadow">{{time.minutes}}:</h4>
+                <h4 class="clock_shadow">{{time.seconds}}</h4>
+              </span>
+        </div>
+
         <div class="night">
             <div class="rain" v-if="raining">
                 <span></span>
@@ -103,14 +111,20 @@ export default {
     name: "WeatherApp",
 
     mounted() {
+
+        setInterval(function () {
+            this.getTime();
+        }.bind(this), 1000)
+
         this.fetchData();
-        this.getTime();
-        console.log(this.cloudy)
     },
+
     data(){
         return{
             time:{
-                current: "",
+                hours: "",
+                minutes: "",
+                seconds : "",
             },
             actualTemperatue: {
                 actual: "",
@@ -137,11 +151,15 @@ export default {
     methods:{
         getTime(){
             const today = new Date();
-            this.time.current = today.getHours();
+            this.time.hours = today.getHours();
+            this.time.minutes = today.getUTCMinutes();
+            this.time.seconds = today.getSeconds();
 
-            if(this.time.current > 6 && this.time.current < 20){
+
+            if(this.time.hours > 6 && this.time.hours < 20){
                 this.isDay = true;
             }
+
         },
 
         fetchData(){
@@ -153,7 +171,7 @@ export default {
                     this.actualTemperatue.wind = Math.round(data.wind.speed);
                     this.actualTemperatue.main = data.weather[0].description;
                     this.weather.icon = ("http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
-                    console.log(this.actualTemperatue.main)
+
                     if(this.actualTemperatue.main == "rain" || this.actualTemperatue.main == "shower rain"){
                         this.raining = true;
                         this.cloudy = true;
@@ -689,6 +707,11 @@ p {
     100% {
         transform: translateY(0px);
     }
+}
+
+.clock_shadow{
+    color: white;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgb(0 0 0 / 15%);
 }
 
 </style>

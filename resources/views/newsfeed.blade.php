@@ -27,9 +27,7 @@
 <body>
 
 <div id="app">
-    <header-menu></header-menu>
-    <left-side-menu></left-side-menu>
-    <right-side-menu></right-side-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
 
     <div class="content-grid">
 
@@ -153,7 +151,7 @@
 
             <div class="grid-column">
 
-                <profile-completion-widget :user_id="{{Auth::User()->id}}"></profile-completion-widget>
+                <profile-completion-widget :user="{{Auth::User()}}"></profile-completion-widget>
 
                 <friends-widget></friends-widget>
 

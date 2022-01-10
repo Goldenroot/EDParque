@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('home');
     }
 
@@ -32,15 +33,18 @@ class HomeController extends Controller
         return view("newsfeed");
     }
 
+    public function overview(){
+        return view('overview');
+    }
+
     public function view_students(){
-        $students = User::All();
+        $students = User::get();
 
         return view('people.list', ["students" => $students]);
     }
 
     public function view_person_profile($slug){
         $person = User::where("slug", $slug)->first();
-
 
         if($person == Auth::user()){
             return redirect("/profile");

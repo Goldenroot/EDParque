@@ -28,7 +28,7 @@
 
 
 <div id="app">
-    <header-menu></header-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
 
 <div class="content-grid">
 

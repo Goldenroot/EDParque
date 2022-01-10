@@ -2,150 +2,282 @@
 
     <aside id="chat-widget-messages" class="chat-widget sidebar right closed" style="z-index: 2;">
 
-        <div class="chat-widget-messages" data-simplebar="init" style="height: 552px;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
+        <div class="chat-widget-messages" data-simplebar="init" style="height: 552px;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
 
-            <div class="chat-widget-message">
-                <!-- USER STATUS -->
+            <div class="simplebar-content" style="padding: 0px">
+
+            <div class="chat-widget-message" v-for="contact in contacts">
                 <div class="user-status">
-                    <!-- USER STATUS AVATAR -->
                     <div class="user-status-avatar">
-                        <!-- USER AVATAR -->
-                        <div class="user-avatar small no-outline online">
-                            <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar small no-outline">
                             <div class="user-avatar-content">
-                                <!-- HEXAGON -->
-                                <div class="hexagon-image-30-32" data-src="img/avatar/03.jpg" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
-                            </div>
-                            <!-- /USER AVATAR CONTENT -->
-
-                            <!-- USER AVATAR PROGRESS -->
-                            <div class="user-avatar-progress">
-                                <!-- HEXAGON -->
-                                <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
-                            </div>
-                            <!-- /USER AVATAR PROGRESS -->
-
-                            <!-- USER AVATAR PROGRESS BORDER -->
-                            <div class="user-avatar-progress-border">
-                                <!-- HEXAGON -->
-                                <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                <!-- /HEXAGON -->
-                            </div>
-                            <!-- /USER AVATAR PROGRESS BORDER -->
-
-                            <!-- USER AVATAR BADGE -->
-                            <div class="user-avatar-badge">
-                                <!-- USER AVATAR BADGE BORDER -->
-                                <div class="user-avatar-badge-border">
-                                    <!-- HEXAGON -->
-                                    <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                    <!-- /HEXAGON -->
+                                <div class="hexagon-image-30-32" :data-src="contact.avatar" style="width: 30px; height: 32px; position: relative;">
+                                    <img data-v-fdbe9c1c="" id="navigation-widget-small-user-image" :src="contact.avatar" style="width: 30px; height: 32px; position: relative; top: 0px; left: 0px; border-radius: 20px;">
                                 </div>
-                                <!-- /USER AVATAR BADGE BORDER -->
-
-                                <!-- USER AVATAR BADGE CONTENT -->
-                                <div class="user-avatar-badge-content">
-                                    <!-- HEXAGON -->
-                                    <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
-                                    <!-- /HEXAGON -->
-                                </div>
-                                <!-- /USER AVATAR BADGE CONTENT -->
-
-                                <!-- USER AVATAR BADGE TEXT -->
-                                <p class="user-avatar-badge-text">16</p>
-                                <!-- /USER AVATAR BADGE TEXT -->
                             </div>
-                            <!-- /USER AVATAR BADGE -->
                         </div>
-                        <!-- /USER AVATAR -->
                     </div>
-                    <!-- /USER STATUS AVATAR -->
-
-                    <!-- USER STATUS TITLE -->
-                    <p class="user-status-title"><span class="bold">Nick Grissom</span></p>
-                    <!-- /USER STATUS TITLE -->
-
-                    <!-- USER STATUS TEXT -->
+                    <p class="user-status-title"><span class="bold">{{ contact.name }}</span></p>
                     <p class="user-status-text small">Can you stream the new game?</p>
-                    <!-- /USER STATUS TEXT -->
-
-                    <!-- USER STATUS TIMESTAMP -->
                     <p class="user-status-timestamp floaty">2hrs</p>
-                    <!-- /USER STATUS TIMESTAMP -->
                 </div>
-                <!-- /USER STATUS -->
             </div>
 
         </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 735px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 414px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
 
-        <!-- CHAT WIDGET FORM -->
-        <form class="chat-widget-form">
-            <!-- INTERACTIVE INPUT -->
-            <div class="interactive-input small">
-                <input type="text" id="chat-widget-search" name="chat_widget_search" placeholder="Search Messages...">
-                <!-- INTERACTIVE INPUT ICON WRAP -->
-                <div class="interactive-input-icon-wrap">
-                    <!-- INTERACTIVE INPUT ICON -->
-                    <svg class="interactive-input-icon icon-magnifying-glass">
-                        <use xlink:href="#svg-magnifying-glass"></use>
-                    </svg>
-                    <!-- /INTERACTIVE INPUT ICON -->
-                </div>
-                <!-- /INTERACTIVE INPUT ICON WRAP -->
 
-                <!-- INTERACTIVE INPUT ACTION -->
-                <div class="interactive-input-action">
-                    <!-- INTERACTIVE INPUT ACTION ICON -->
-                    <svg class="interactive-input-action-icon icon-cross-thin">
-                        <use xlink:href="#svg-cross-thin"></use>
-                    </svg>
-                    <!-- /INTERACTIVE INPUT ACTION ICON -->
-                </div>
-                <!-- /INTERACTIVE INPUT ACTION -->
-            </div>
-            <!-- /INTERACTIVE INPUT -->
-        </form>
-        <!-- /CHAT WIDGET FORM -->
-
-        <!-- CHAT WIDGET BUTTON -->
-        <div class="chat-widget-button">
-            <!-- CHAT WIDGET BUTTON ICON -->
+        <div class="chat-widget-button" id="chat-menu-button">
             <div class="chat-widget-button-icon">
-                <!-- BURGER ICON -->
                 <div class="burger-icon">
-                    <!-- BURGER ICON BAR -->
                     <div class="burger-icon-bar"></div>
-                    <!-- /BURGER ICON BAR -->
-
-                    <!-- BURGER ICON BAR -->
                     <div class="burger-icon-bar"></div>
-                    <!-- /BURGER ICON BAR -->
-
-                    <!-- BURGER ICON BAR -->
                     <div class="burger-icon-bar"></div>
-                    <!-- /BURGER ICON BAR -->
                 </div>
-                <!-- /BURGER ICON -->
             </div>
-            <!-- /CHAT WIDGET BUTTON ICON -->
-
-            <!-- CHAT WIDGET BUTTON TEXT -->
-            <p class="chat-widget-button-text">Messages / Chat</p>
-            <!-- /CHAT WIDGET BUTTON TEXT -->
+            <p class="chat-widget-button-text">Mensagens / Contactos</p>
         </div>
-        <!-- /CHAT WIDGET BUTTON -->
     </aside>
 
 </template>
 
 <script>
 export default {
-    name: "RightSideMenu"
+    name: "RightSideMenu",
+
+    props:{
+        contacts: {
+            type: Array,
+            default: []
+        },
+    },
+
 }
 </script>
 
 <style scoped>
+
+[data-simplebar] {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.simplebar-mask {
+    direction: inherit;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto !important;
+    height: auto !important;
+    z-index: 0;
+}
+
+.simplebar-offset {
+    direction: inherit !important;
+    box-sizing: inherit !important;
+    resize: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.simplebar-content-wrapper {
+    direction: inherit;
+    box-sizing: border-box !important;
+    position: relative;
+    display: block;
+    height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+    width: auto;
+    /* visibility: visible; */
+    max-width: 100%; /* Not required for horizontal scroll to trigger */
+    max-height: 100%; /* Needed for vertical scroll to trigger */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.simplebar-content:before,
+.simplebar-content:after {
+    content: ' ';
+    display: table;
+}
+
+.simplebar-placeholder {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.simplebar-height-auto-observer-wrapper {
+    box-sizing: inherit !important;
+    height: 100%;
+    width: 100%;
+    max-width: 1px;
+    position: relative;
+    float: left;
+    max-height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    flex-grow: inherit;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+.simplebar-height-auto-observer {
+    box-sizing: inherit;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000%;
+    width: 1000%;
+    min-height: 1px;
+    min-width: 1px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.simplebar-track {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+    pointer-events: all;
+}
+
+.simplebar-scrollbar {
+    position: absolute;
+    right: 2px;
+    width: 4px;
+    min-height: 10px;
+}
+
+.simplebar-scrollbar:before {
+    position: absolute;
+    content: '';
+    background: #adafca;
+    border-radius: 7px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    /* When hovered, remove all transitions from drag handle */
+    opacity: .4;
+    transition: opacity 0s linear;
+}
+
+.simplebar-track.simplebar-vertical {
+    top: 0;
+    width: 11px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 2px;
+    bottom: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+    left: 0;
+    height: 11px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+    height: 100%;
+    left: 2px;
+    right: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    right: auto;
+    left: 0;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
+}
+
+/* Rtl support */
+[data-simplebar-direction='rtl'] .simplebar-track.simplebar-vertical {
+    right: auto;
+    left: 0;
+}
+
+.hs-dummy-scrollbar-size {
+    direction: rtl;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    height: 500px;
+    width: 500px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.simplebar-hide-scrollbar {
+    position: fixed;
+    left: 0;
+    visibility: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/*--------------------
+    CUSTOM STYLES
+--------------------*/
+[data-simplebar].navigation-widget {
+    position: fixed;
+}
+
+[data-simplebar].navigation-widget .simplebar-scrollbar {
+    right: 4px;
+}
 
 </style>

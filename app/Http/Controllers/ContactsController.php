@@ -18,7 +18,7 @@ class ContactsController extends Controller
     public function get()
     {
         // get all users except the authenticated one
-        $contacts = User::where('id', '!=', auth()->id())->get();
+        $contacts = Auth::user()->friends();
 
         // get a collection of items where sender_id is the user who sent us a message
         // and messages_count is the number of unread messages we have from him
@@ -29,6 +29,7 @@ class ContactsController extends Controller
             ->get();
 
         // add an unread key to each contact with the count of unread messages
+        $contacts = collect($contacts);
         $contacts = $contacts->map(function($contact) use ($unreadIds) {
             $contactUnread = $unreadIds->where('sender_id', $contact->id)->first();
 

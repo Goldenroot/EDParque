@@ -26,7 +26,11 @@ class User extends Authenticatable
         'email',
         'gender',
         'password',
+        'school_id',
     ];
+
+    protected $with = ['profile'];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -50,4 +54,13 @@ class User extends Authenticatable
     public function profile(){
         return $this->hasOne('App\Models\Profile');
     }
+
+    public function school(){
+        return $this->belongsTo('App\Models\School');
+    }
+
+    public function work(){
+        return $this->hasMany('App\Models\Work');
+    }
+
 }

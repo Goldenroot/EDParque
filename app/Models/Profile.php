@@ -13,7 +13,7 @@ class Profile extends Model
     public $fillable = ['user_id', 'banner', 'about', 'location'];
 
     public function user(){
-
         return $this->belongsTo('App\Models\User');
     }
+
 }

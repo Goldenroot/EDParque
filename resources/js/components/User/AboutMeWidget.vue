@@ -12,27 +12,27 @@
 
                 <div class="information-line">
                     <p class="information-line-title">Nome: </p>
-                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user_name}}</p>
+                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user.name}}</p>
                 </div>
 
                 <div class="information-line">
                     <p class="information-line-title">País: </p>
-                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user_country}}</p>
+                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user.profile.country}}</p>
                 </div>
 
                 <div class="information-line">
                     <p class="information-line-title">Linguagem: </p>
-                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user_language}}</p>
+                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user.profile.language}}</p>
                 </div>
 
                 <div class="information-line">
-                    <p class="information-line-title">Agrupamento: </p>
-                    <p class="information-line-text" style="text-transform:capitalize;">{{this.user_school}}</p>
+                    <p class="information-line-title">Escola: </p>
+                    <p class="information-line-text" style="text-transform:capitalize;">{{user_school}}</p>
                 </div>
 
                 <div class="information-line">
                     <p class="information-line-title">Entrou em: </p>
-                    <p class="information-line-text" style="text-transform:capitalize;"></p>
+                    <p class="information-line-text">{{this.user_registrationday + ' do ' + this.user_registrationmonth + ' de ' + this.user_registrationyear}}</p>
                 </div>
 
             </div>
@@ -46,33 +46,33 @@
 export default {
     name: "AboutMe",
 
-    props: ["user_id"],
+    props:{
+        user:{
+            type: Object,
+            required: true,
+        },
+    },
 
     data(){
         return{
-            user_name : '',
-            user_country : '',
-            user_language : '',
-            user_school : '',
-            user_registrationmonth : '',
-            user_registrationday : '',
-            user_registrationyear : '',
+            user_registrationyear : "",
+            user_registrationmonth : "",
+            user_registrationday : "",
+            user_school : '-',
         }
     },
 
     mounted() {
-        window.axios.get('/api/cl_user/' + this.user_id).then(res => {
-            this.user = res.data;
-            this.user_name = this.user['0']['name'];
-            this.user_registration = this.user['0']['created_at'];
-            this.user_country = this.user['0']['profile']['country'];
-            this.user_language = this.user['0']['profile']['language'];
+        this.user_registrationyear = this.user.created_at.slice(0,4);
+        this.user_registrationmonth = this.user.created_at.slice(5,7);
+        this.user_registrationday = this.user.created_at.slice(8,10);
 
-            this.user_registrationyear = new Date(this.user_registration).getFullYear();
-            console.log(new Date(this.user_registration).getMonth())
+        if(this.user.school_id != null){
 
-            console.log(this.user['0']['created_at'])
-        });
+            axios.get('/get_school/' + this.user.school_id).then(data =>{
+                this.user_school = data.data.NomeEstabelecimento;
+            });
+        }
     }
 }
 </script>

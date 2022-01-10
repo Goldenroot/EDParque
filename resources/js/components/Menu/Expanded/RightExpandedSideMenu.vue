@@ -1,5 +1,5 @@
 <template>
-    <aside id="chat-widget-messages" class="chat-widget sidebar right" style="z-index: 0;">
+    <aside id="chat-widget-messages" class="chat-widget sidebar right hidden" style="z-index: 0;">
         <div class="chat-widget-messages" data-simplebar="init" style="height: 460px;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
 
             <div class="chat-widget-message">

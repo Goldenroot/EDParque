@@ -25,9 +25,8 @@
 
 <div id="app">
 
-    <left-side-menu></left-side-menu>
-    <header-menu></header-menu>
-    <right-side-menu></right-side-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
+
 
     <main class="main">
         <div class="responsive-wrapper">

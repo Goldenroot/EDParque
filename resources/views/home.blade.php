@@ -26,18 +26,21 @@
 <body>
 
 <div id="app">
-    <header-menu></header-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
 
     <div class="content-grid">
+
+        <profile-header :user="{{Auth::user()}}"></profile-header>
+
         <div class="grid grid-3-6-3 mobile-prefer-content">
 
             <div class="grid-column">
 
-                <about-me-widget user_id="{{Auth::User()->id}}"></about-me-widget>
+                <about-me-widget :user="{{Auth()->user()}}"></about-me-widget>
 
-                <school-widget></school-widget>
+                <school-work-widget :user="{{Auth::User()}}" :works="{{Auth::User()->work}}"></school-work-widget>
 
-                <friends-widget user_id="{{Auth::User()->id}}"></friends-widget>
+                <friends-widget></friends-widget>
 
             </div>
 
@@ -50,7 +53,7 @@
                 <calendar-widget></calendar-widget>
                 <weather-app></weather-app>
 
-                <profile-completion-widget user_id="{{Auth::id()}}"></profile-completion-widget>
+                <profile-completion-widget :user="{{Auth::User()}}"></profile-completion-widget>
 
             </div>
 

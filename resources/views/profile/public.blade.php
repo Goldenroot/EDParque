@@ -26,9 +26,8 @@
 <body>
 
 <div id="app">
-    <header-menu></header-menu>
-    <left-side-menu></left-side-menu>
-    <right-side-menu></right-side-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
+
 
     <div class="content-grid">
 
@@ -151,9 +150,7 @@
 
             <div class="grid-column">
 
-                <about-me-widget user_id="{{Auth::User()->id}}"></about-me-widget>
 
-                <friends-widget user_id="{{Auth::User()->id}}"></friends-widget>
 
             </div>
 

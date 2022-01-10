@@ -1,16 +1,16 @@
 <template>
 
-    <nav id="navigation-widget" class="navigation-widget navigation-widget-desktop sidebar left delayed" data-simplebar="init" style="height: 889px;"><div class="simplebar-wrapper" style="margin: 0px 0px -40px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: scroll;"><div class="simplebar-content" style="padding: 0px 0px 40px;">
-        <figure class="navigation-widget-cover liquid" id="navigation-widget-banner" style="height: 100px; background: url() center center / cover no-repeat;"></figure>
+    <nav id="navigation-widget" class="navigation-widget navigation-widget-desktop sidebar left hidden" data-simplebar="init" style="height: 889px;"><div class="simplebar-wrapper" style="margin: 0px 0px -40px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: scroll;"><div class="simplebar-content" style="padding: 0px 0px 40px;">
+        <figure class="navigation-widget-cover liquid" id="navigation-widget-banner" style="height: 100px;" v-bind:style="{ background: 'url(' + this.profile.banner + ') center center / cover no-repeat' }"></figure>
 
-        <div class="text-center">
-            <img id="navigation-widget-user-image" class="user-avatar-settings" src="" style="height: 100px; width: 100px; margin-top: -25%">
+        <div style="text-align: center !important;">
+            <img id="navigation-widget-user-image" class="user-avatar-settings" v-bind:src="this.user.avatar" style="height: 100px; width: 100px; margin-top: -25%">
         </div>
 
         <div class="user-short-description" style="padding-top: 25px;">
-            <p class="user-short-description-title">ra</p>
+            <p class="user-short-description-title">{{this.user.name}}</p>
 
-            <p class="user-short-description-text"><span>@</span>ra7</p>
+            <p class="user-short-description-text"><span>@</span>{{this.user.slug}}</p>
         </div>
 
         <div class="user-stats">
@@ -32,28 +32,35 @@
 
         <ul class="menu">
             <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/home">
+                <a class="menu-item-link" href="/home">
                     <i class="fas fa-home" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 500; transition: all .2s ease-in-out; color: #adafca;"></i>
                     Home
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/people">
-                    <i class="fas fa-user-plus" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
-                    Descobrir Pessoas
+                <a class="menu-item-link" href="/overview">
+                    <i class="fal fa-signal-alt-3" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
+                    Overview
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/friends">
+                <a class="menu-item-link" href="/students">
+                    <i class="fas fa-user-plus" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
+                    Ver Estudantes
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-item-link" href="/friends">
                     <i class="fas fa-users" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                     Os meus amigos
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link text-tooltip-tfr" href="http://texter.test/pt/pending">
+                <a class="menu-item-link text-tooltip-tfr" href="/pending">
                     <i class="fas fa-user-clock" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                     Amigos Pendentes
                 </a>
@@ -67,21 +74,14 @@
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/badges">
-                    <i class="fal fa-medal" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
-                    Crachás
-                </a>
-            </li>
-
-            <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/notifications">
+                <a class="menu-item-link" href="/notifications">
                     <i class="fal fa-bell" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                     Notificações
                 </a>
             </li>
 
             <li class="menu-item">
-                <a class="menu-item-link" href="http://texter.test/pt/settings">
+                <a class="menu-item-link" href="/settings">
                     <i class="fas fa-cog" style="position: absolute; top: 14px; left: 14px; pointer-events: none; font-size: 20px; font-weight: 400; transition: all .2s ease-in-out; color: #adafca;"></i>
                     Definições
                 </a>
@@ -93,37 +93,39 @@
 </template>
 
 <script>
+
 export default {
     name: "LeftExpandedSideMenu",
 
-    props: ["user_id"],
+    props: {
+        user: {
+            type: Object,
+            required: true
+        },
 
-    data(){
-        return{
-            activeTab: 'LeftExpandedSideMenu',
-            user_name : '',
-            user_slug : '',
-
-            user_profile_banner : '',
+        profile:{
+            type: Object,
+            required: true,
         }
     },
-
-    mounted() {
-        window.axios.get('/api/cl_user/' + this.user_id).then(res => {
-            this.user = res.data;
-            this.user_name = this.user['name'];
-            this.user_slug = this.user['slug'];
-        })
-
-        window.axios.get('/api/cl_user_profile/' + this.user_id).then(res => {
-            this.user_profile = res.data;
-            console.log(this.user_profile)
-            this.user_profile_banner = this.user_profile['banner'];
-        })
-    }
 }
 </script>
 
 <style scoped>
+
+.user-avatar-settings{
+    cursor: pointer !important;
+    height: 100px;
+    width: 100px;
+    margin-top: -25%;
+    margin-top: -7% !important;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border: 5px solid white !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    border: 5px solid white !important;
+    margin-top: -25% !important;
+}
 
 </style>

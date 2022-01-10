@@ -25,24 +25,16 @@
 
 <div id="app">
 
-    <left-side-menu></left-side-menu>
-    <header-menu></header-menu>
-    <right-side-menu></right-side-menu>
+    <header-menu :user="{{Auth::User()}}" :profile="{{Auth::User()->profile}}"></header-menu>
 
-<div class="content-grid">
-    <div class="section-banner" style="background-image: -webkit-linear-gradient(0deg, #03a9f4 0%, #4fc3f7 100%);">
-        <img class="section-banner-icon" src="img/banner/members-icon.png" alt="members-icon">
-        <p class="section-banner-title">Estudantes [{{count($students)}}]</p>
-        <p class="section-banner-text">Procura todos os estudantes!</p>
+    <div class="content-grid">
+
+        <div class="section-banner">
+            <img class="section-banner-icon" src="{{URL::asset("images/groups-icon.png")}}" alt="overview-icon">
+            <p class="section-banner-title">Alunos</p>
+            <p class="section-banner-text">Procura todos os alunos</p>
+        </div>
+
+        <student-card :students="{{$students}}"></student-card>
     </div>
-
-    <div class="grid grid-3-3-3 centered">
-
-        @foreach($students as $student)
-            <student-card :student_id="{{$student->id}}"></student-card>
-        @endforeach
-
-    </div>
-
-</div>
 </div>

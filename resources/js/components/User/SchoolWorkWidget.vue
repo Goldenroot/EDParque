@@ -1,48 +1,52 @@
 <template>
     <div class="widget-box">
-        <div class="widget-box-settings">
-            <div class="post-settings-wrap" style="position: relative;">
-                <div class="post-settings widget-box-post-settings-dropdown-trigger">
-                    <svg class="post-settings-icon icon-more-dots">
-                        <use xlink:href="#svg-more-dots"></use>
-                    </svg>
-                </div>
 
-                <!-- SIMPLE DROPDOWN -->
-                <div class="simple-dropdown widget-box-post-settings-dropdown" style="position: absolute; z-index: 9999; top: 30px; right: 9px; opacity: 0; visibility: hidden; transform: translate(0px, -20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
-                    <!-- SIMPLE DROPDOWN LINK -->
-                    <p class="simple-dropdown-link">Widget Settings</p>
-                    <!-- /SIMPLE DROPDOWN LINK -->
-                </div>
-                <!-- /SIMPLE DROPDOWN -->
-            </div>
-            <!-- /POST SETTINGS WRAP -->
-        </div>
-
-        <p class="widget-box-title">Trabalhos<span class="highlighted">[]</span></p>
+        <p class="widget-box-title">Trabalhos<span class="highlighted" style="float: right">[ {{works.length}} ]</span></p>
 
         <div class="widget-box-content">
             <div class="post-peek-list">
-                <div class="post-peek">
-                    <a class="post-peek-image" href="profile-post.html">
-                        <figure class="picture small round liquid" style="background: url(&quot;img/cover/19.jpg&quot;) center center / cover no-repeat;">
-                            <img src="img/cover/19.jpg" alt="cover-19" style="display: none;">
+                <div class="post-peek" v-for="work in works.slice(0,3)">
+                    <a class="post-peek-image" href="#">
+                        <figure class="picture small round liquid" style="background: url('images/about-books.png') center center / cover no-repeat;">
                         </figure>
                     </a>
 
-                    <p class="post-peek-title"><a href="">Redes </a></p>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <p class="post-peek-title" style="padding-bottom: 5px"><a href="#">{{ work.class}}</a></p>
+                    </div>
+                    <p class="information-line-text">{{work.name}}</p>
 
-                    <p class="post-peek-text">Adicionado há 6 dias</p>
+                    <p class="post-peek-text">{{'Adicionado a ' + work.created_at.slice(5,7)  + ' do ' + work.created_at.slice(8,10) + ' de ' + work.created_at.slice(0, 4) }}</p>
                 </div>
             </div>
-            <a class="widget-box-button button small secondary" href="">Ver Todos</a>
+            <a class="widget-box-button button small secondary" href="#" v-if="works == 0">Adicionar</a>
+            <a class="widget-box-button button small secondary" href="/works" v-if="works != 0">Ver todos</a>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "SchoolWorkWidget"
+    name: "SchoolWorkWidget",
+
+    props:{
+        user:{
+            type: Object,
+            required: true,
+        },
+
+        works:{
+            type: [],
+            required: false,
+        }
+    },
+
+    mounted() {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    }
+
 }
 </script>
 
